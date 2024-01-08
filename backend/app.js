@@ -1,5 +1,4 @@
-// sHOZ5aTim7XfVs5r
-
+require('dotenv').config();
 const express = require("express");
 const mongoose = require("mongoose");
 const router = require("./routes/bookRoutes");
@@ -15,7 +14,7 @@ app.use("/books", router);
 
 const connectDB = async () => {
   await mongoose
-    .connect("mongodb+srv://zephop76593:sHOZ5aTim7XfVs5r@cluster0.ydvchqq.mongodb.net/?retryWrites=true&w=majority")
+    .connect(process.env.MONGO_DB)
     .then(() => console.log("Connected to DB"))
     .then(() => {
       app.listen(5000);
