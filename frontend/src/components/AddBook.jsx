@@ -29,7 +29,7 @@ const AddBook = () => {
 
 	const sendRequest = async () => {
 		await axios
-			.post("https://bookstoremcb-api.onrender.com", {
+			.post("https://book-store-qwdw.onrender.com", {
 				name: String(inputs.name),
 				author: String(inputs.author),
 				description: String(inputs.description),
