@@ -6,7 +6,7 @@ const Book = (props) => {
 	const { _id, name, author, description, price, image, available } = props.book;
 	const deleteHandler = async () => {
 		try {
-			await axios.delete(`http://localhost:5000/books/${_id}`);
+			await axios.delete(`https://bookstoremcb-api.onrender.com/books/${_id}`);
 			props.onDelete(_id);
 		} catch (error) {
 			console.error("Error deleting book:", error);
