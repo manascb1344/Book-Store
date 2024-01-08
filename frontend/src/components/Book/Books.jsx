@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Book from "./Book";
 
-const URL = "https://book-store-api-backend-1344.onrender.com/books";
+const URL = "https://book-store-api-backend-1344.onrender.com:5000/books";
 
 const fetchHandler = async () => {
 	return await axios.get(URL).then((res) => res.data);
